@@ -1,0 +1,14 @@
+mixin productDropdown()
+  .product-dropdown
+    .row.justify-content-between
+      each section in productDropdown
+        .product-dropdown__list.col-3
+          .product-dropdown__category
+            h5.bold= section.category
+          ul
+            each item in section.content
+              li 
+                a(href="product-detail.html")= item 
+
+
+

@@ -1,0 +1,15 @@
+mixin cartDropdown
+  .cart-dropdown
+    .cart-dropdown__items
+      -for (var i = 0; i < 2; ++i) {
+        .cart-dropdown__item 
+          img(src="assets/cart-dropdown-item.png" alt="item image")
+          p.cart-dropdown__content Áo sơ mi Nam 
+          p.cart-dropdown__price 120.000đ
+      -} 
+    .cart-dropdown__total.d-flex.justify-content-between
+      p.cart-dropdown__content Tổng số
+      p.cart-dropdown__price 240.000đ
+    a(href="cart.html")       
+      button.btn GIỎ HÀNG 
+

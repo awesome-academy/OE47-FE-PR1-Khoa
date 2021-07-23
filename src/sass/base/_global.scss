@@ -1,0 +1,28 @@
+@use '../abstract/variables' as *;
+
+a {
+  color: $cod-gray;
+}
+
+a:hover {
+  color: $wasabi !important;
+}
+
+ol,
+ul {
+  padding-left: 0;
+  list-style-type: none;
+}
+
+nav + div {
+  min-height: calc(100vh - 77px - 264px);
+  padding-bottom: 4rem;
+}
+
+.table--price {
+  font-family: $lobster;
+}
+
+table > * {
+  text-align: center;
+}

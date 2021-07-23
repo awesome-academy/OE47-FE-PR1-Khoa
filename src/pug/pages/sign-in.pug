@@ -1,0 +1,22 @@
+extends ../base/base
+
+block title
+  title Sign in
+
+block content
+  .container
+    +internalLink(ilSignIn)
+    .sign-in__header
+      h2.mb-0 ĐĂNG NHẬP
+      button.btn.btn-dark.btn_sign-in.text-uppercase ĐĂNG KÝ
+    form.form--concrete.p-4.p-sm-5
+      h4 KHÁCH HÀNG ĐĂNG KÝ
+      p.sign-in__notice.mb-5 Nếu bạn có tài khoản, xin vui lòng đăng nhập.
+      .row
+        .col-lg-6
+          each item in signInInputs
+            label(for= item.id).form-label= item.label
+            input(id= item.id type= item.type required).form-control
+          .d-flex.align-items-center.mt-4
+            a.bold.me-4(href='#') Quên Mật Khẩu?
+            button.btn Đăng nhập
