@@ -1,17 +1,18 @@
+@use './abstract/mixins' as *;
+@use './abstract/variables' as *;
+
 @use './base/bootstrap' as *;
 @use './base/functions' as *;
 @use './base/global' as *;
-@use './base/mixins' as *;
 @use './base/sanitize' as *;
 @use './base/typography' as *;
-@use './base/variables' as *;
 
 @use './layout/footer' as *;
-@use './layout/nav' as *;
 @use './layout/home-grid' as *;
 @use './layout/home-hero' as *;
 @use './layout/home_carousel' as *;
 @use './layout/pop-up' as *;
+@use './layout/nav' as *;
 @use './layout/nav-cart-dropdown' as *;
 @use './layout/nav-product-dropdown' as *;
 
