@@ -1,0 +1,17 @@
+include ../data/nav-data
+nav.navbar.navbar-expand-lg.navbar-light
+  .container
+    a.navbar-brand(href='#') 
+      img(src="assets/nav-logo.png" alt="brand-logo")
+    a(href="cart.html")  
+      i.fas.fa-shopping-cart 
+    a(href="")    
+      i.fas.fa-search
+    button.navbar-toggler(type='button' data-bs-toggle='collapse' data-bs-target='#navbar-content' aria-controls='navbarSupportedContent' aria-expanded='false' aria-label='Toggle navigation')
+      span.navbar-toggler-icon
+    #navbar-content.collapse.navbar-collapse.mt-4.mt-lg-0
+      ul.navbar-nav.mb-2.mb-lg-0
+        each link in navlinks
+          li.nav-item
+            a.nav-link(href="")= link 
+
