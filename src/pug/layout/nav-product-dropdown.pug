@@ -1,0 +1,27 @@
+include ../data/nav-data
+.product-dropdown
+  .row.justify-content-between
+    .product-dropdown__list.col-3
+      .product-dropdown__category
+        h5.open-sans.bold DƯỠNG DA
+      ul
+        each item in duongDa
+          li
+            a(href="")= item 
+    .product-dropdown__list.col-3
+      .product-dropdown__category
+        h5.open-sans.bold NƯỚC HOA
+      ul
+        each item in nuocHoa
+          li
+            a(href="")= item 
+    .product-dropdown__list.col-3 
+      .product-dropdown__category
+        h5.open-sans.bold TRANG SỨC
+      ul
+        each item in trangSuc
+          li
+            a(href="")= item
+
+
+

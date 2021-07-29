@@ -1,0 +1,9 @@
+@use '../abstract/variables' as *;
+
+a {
+  color: $black;
+}
+
+a:hover {
+  color: $main-green !important;
+}

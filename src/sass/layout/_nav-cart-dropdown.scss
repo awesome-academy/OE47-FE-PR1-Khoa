@@ -1,0 +1,52 @@
+@use '../abstract/variables' as *;
+@use '../abstract/mixins' as *;
+
+.nav-cart {
+  padding: 2.2rem 0;
+
+  & > a {
+    padding: 2.4rem 2.2rem;
+  }
+
+  &:hover > .cart-dropdown {
+    @extend %dropdown-hover;
+    padding: 1rem;
+  }
+}
+
+.cart-dropdown {
+  @extend %dropdown;
+  width: 20rem;
+  top: 6.5rem;
+  right: -3.5rem;
+
+  &__items {
+    display: flex;
+    flex-direction: column;
+
+    &::after {
+      @extend %gray-line;
+    }
+  }
+
+  &__item {
+    margin-bottom: 1.6rem;
+
+    & > img {
+      float: left;
+      margin-right: 1rem;
+    }
+  }
+
+  .cart-dropdown__content {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.2rem;
+    color: $black;
+  }
+
+  .cart-dropdown__price {
+    font-size: 1.4rem;
+    font-family: 'Lobster';
+    color: $main-green;
+  }
+}

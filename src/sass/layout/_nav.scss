@@ -2,7 +2,7 @@
 @use '../abstract/mixins' as *;
 
 nav.navbar {
-  background-color: $nav-color;
+  background-color: $gray-nav;
 
   i {
     font-size: 1.6rem;
@@ -16,30 +16,26 @@ nav.navbar {
     }
   }
 
-  a {
-    color: $nav-text !important;
-
-    &:hover {
-      color: $nav-hover !important;
-    }
-  }
-
   ul.navbar-nav {
     width: 100%;
     justify-content: space-evenly;
 
     a.nav-link {
+      color: $black;
       font-size: 1.2rem;
       font-family: 'Open Sans', sans-serif;
       font-weight: bold;
       text-transform: uppercase;
+      i.fas.fa-angle-down {
+        margin-left: 0.25rem;
+      }
     }
   }
 }
 
-.container a:nth-child(2),
-.container a:nth-child(3) {
-  margin: 0 1rem;
+// Cho riêng 2 icon giỏ hàng & tìm kiếm
+.nav-find,
+.nav-cart {
   position: relative;
 }
 
@@ -52,10 +48,10 @@ nav.navbar {
 
 // Fix lại vị trí của 2 icon cart và finding trên nav-bar cho tablet trở lên
 @media screen and (min-width: $lg) {
-  .container a:nth-child(2) {
+  .nav-cart {
     order: 1;
   }
-  .container a:nth-child(3) {
+  .nav-find {
     order: 2;
   }
 }

@@ -3,17 +3,40 @@
 // Fix lại vị trí của 2 icon cart và finding trên nav-bar
 @mixin nav-fix($first-breakpoint, $second-breakpoint, $cart-move, $find-move) {
   @media screen and (min-width: $first-breakpoint) and (max-width: $second-breakpoint - 1px) {
-    .container a:nth-of-type(2) {
+    .nav-cart {
       left: $cart-move;
     }
-    .container a:nth-of-type(3) {
+    .nav-find {
       left: $find-move;
     }
   }
 }
 
-@mixin media($first-breakpoint, $second-breakpoint) {
-  @media screen and (min-width: $first-breakpoint) and (max-width: $second-breakpoint) {
-    @content;
+@mixin product-dropdown-fix($first-breakpoint, $second-breakpoint, $distance) {
+  @media screen and (min-width: $first-breakpoint) and (max-width: $second-breakpoint - 1px) {
+    .product-dropdown {
+      right: $distance;
+    }
   }
+}
+
+%dropdown {
+  overflow: hidden;
+  opacity: 0;
+  height: 0;
+  transition: all 0.3s ease-in;
+  position: absolute;
+}
+
+%dropdown-hover {
+  opacity: 1;
+  height: 28.1rem;
+  border: 2px solid $main-green;
+}
+
+%gray-line {
+  border: 2px solid $gray-nav;
+  width: 100%;
+  content: '';
+  margin: 0 0 1rem 0;
 }
