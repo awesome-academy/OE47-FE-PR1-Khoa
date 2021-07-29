@@ -1,0 +1,9 @@
+@use '../abstract/variables' as *;
+
+a {
+  color: $cod-gray;
+}
+
+a:hover {
+  color: $wasabi !important;
+}

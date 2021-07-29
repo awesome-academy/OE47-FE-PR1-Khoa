@@ -2,25 +2,18 @@
 @use '../abstract/mixins' as *;
 
 nav.navbar {
-  background-color: $nav-color;
+  background-color: $wild-sand;
+  border-bottom: 2px solid $silver-chalice;
 
   i {
     font-size: 1.6rem;
   }
 
   .navbar-toggler {
-    background-color: $black;
+    background-color: $cod-gray;
 
     .navbar-toggler-icon {
       background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 0.55%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
-    }
-  }
-
-  a {
-    color: $nav-text !important;
-
-    &:hover {
-      color: $nav-hover !important;
     }
   }
 
@@ -29,17 +22,21 @@ nav.navbar {
     justify-content: space-evenly;
 
     a.nav-link {
+      color: $cod-gray;
       font-size: 1.2rem;
       font-family: 'Open Sans', sans-serif;
       font-weight: bold;
       text-transform: uppercase;
+      i.fas.fa-angle-down {
+        margin-left: 0.25rem;
+      }
     }
   }
 }
 
-.container a:nth-child(2),
-.container a:nth-child(3) {
-  margin: 0 1rem;
+// Cho riêng 2 icon giỏ hàng & tìm kiếm
+.nav-find,
+.nav-cart {
   position: relative;
 }
 
@@ -52,10 +49,10 @@ nav.navbar {
 
 // Fix lại vị trí của 2 icon cart và finding trên nav-bar cho tablet trở lên
 @media screen and (min-width: $lg) {
-  .container a:nth-child(2) {
+  .nav-cart {
     order: 1;
   }
-  .container a:nth-child(3) {
+  .nav-find {
     order: 2;
   }
 }

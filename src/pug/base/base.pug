@@ -1,3 +1,15 @@
+include ../data/data
+include ../layout/footer
+include ../layout/home-carousel
+include ../layout/home-grid
+include ../layout/home-hero
+include ../layout/nav-cart-dropdown
+include ../layout/nav-product-dropdown
+include ../layout/nav-link-dropdown
+include ../layout/nav
+include ../layout/pop-up
+
+
 doctype html
 html(lang="en")
   meta(charset="UTF-8")
@@ -8,6 +20,6 @@ html(lang="en")
   script(src="js/bootstrap.js") 
   block title
   body 
-    include ../layout/nav
+    +nav 
     block content
-    include ../layout/footer
+    //- +footer

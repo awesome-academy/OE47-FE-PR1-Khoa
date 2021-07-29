@@ -7,12 +7,13 @@ const { src, dest, parallel, watch, series } = require('gulp'),
 const FilesPath = {
   sassFiles: 'src/sass/**/styles.scss',
   htmlFiles: 'src/pug/pages/*.pug',
+  jsFiles: 'src/js/*.js',
 };
 
 function sassTask() {
   return src(FilesPath.sassFiles)
     .pipe(sass())
-    .pipe(concat('main.css'))
+    .pipe(concat('styles.css'))
     .pipe(dest('dist/css'))
     .pipe(browserSync.stream());
 }
@@ -24,18 +25,26 @@ function htmlTask() {
     .pipe(browserSync.stream());
 }
 
+function jsTask() {
+  return src(FilesPath.jsFiles)
+    .pipe(dest('dist/js'))
+    .pipe(browserSync.stream());
+}
+
 function assetsTask() {
   return src('assets/**/*').pipe(dest('dist/assets'));
 }
 
 function serve() {
   browserSync.init({ server: { baseDir: './dist' } });
-  watch(FilesPath.sassFiles, sassTask);
+  watch('src/sass/**/*.scss', sassTask);
   watch('src/pug/**/*.pug', htmlTask);
+  watch(FilesPath.jsFiles, jsTask);
 }
 
 exports.sass = sassTask;
 exports.html = htmlTask;
+exports.js = jsTask;
 exports.assets = assetsTask;
-exports.default = series(parallel(htmlTask, sassTask, assetsTask));
-exports.serve = series(serve, parallel(htmlTask, sassTask, assetsTask));
+exports.default = series(parallel(htmlTask, sassTask, jsTask, assetsTask));
+exports.serve = series(serve, parallel(htmlTask, sassTask, jsTask, assetsTask));
