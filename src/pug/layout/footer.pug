@@ -1,0 +1,32 @@
+include ../data/data
+footer.p-3
+  .row.container.mx-auto
+    .footer__section.col-xl-4
+      h5 LIÊN HỆ VỚI CHÚNG TÔI
+      p
+        img(src='assets/mark.png' alt='mark')
+        |  Tầng 4, Tòa nhà Hanoi Group Số 442 Đội&nbsp;Cấn, p.Cống&nbsp;Vị, Q.Ba&nbsp;Đình, Hà&nbsp;Nội
+      p
+        img(src='assets/telephone.png' alt='phone')
+        |  (04) 6674 2332 - 
+        img(src='assets/fax.png' alt='fax')
+        |  (04) 3786 8904
+      p
+        img(src='assets/telephone.png' alt='phone')
+        |  (08) 6680 9686 &nbsp;&nbsp;&nbsp;
+        img(src='assets/mail.png' alt='mail')
+        span  Support@bizweb.vn
+    hr.d-xl-none
+
+    each section in sections 
+      .footer__section.col-xl-2
+        h5= section.category
+        ul 
+          each item in section.content 
+            li
+              a(href="")= item
+      hr.d-xl-none
+
+    .footer__copyright.footer__section
+      p &copy; Copyright 2008-2014 DKT Technology JSC
+      img(src='assets/logo_pay.png' alt='Pay logo')

@@ -1,9 +1,15 @@
 @use '../abstract/variables' as *;
 
 a {
-  color: $black;
+  color: $cod-gray;
 }
 
 a:hover {
-  color: $main-green !important;
+  color: $wasabi !important;
+}
+
+ol,
+ul {
+  padding-left: 0;
+  list-style-type: none;
 }

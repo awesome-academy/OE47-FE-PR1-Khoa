@@ -25,26 +25,7 @@
   &__list {
     display: flex;
     flex-direction: column;
-
-    ul {
-      padding-left: 0;
-
-      li:hover {
-        transform: translateX(1em);
-
-        &::before {
-          content: '\25A0';
-          color: $main-green;
-          display: inline-block;
-          margin: 0.4em 0 0 -1.5em;
-        }
-      }
-
-      a {
-        font-size: 1.4rem;
-        text-decoration: none;
-      }
-    }
+    @include hover-before-bullet;
   }
 
   &__category {

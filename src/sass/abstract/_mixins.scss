@@ -31,12 +31,31 @@
 %dropdown-hover {
   opacity: 1;
   height: 28.1rem;
-  border: 2px solid $main-green;
+  border: 2px solid $wasabi;
 }
 
 %gray-line {
-  border: 2px solid $gray-nav;
+  border: 2px solid $wild-sand;
   width: 100%;
   content: '';
   margin: 0 0 1rem 0;
+}
+
+@mixin hover-before-bullet {
+  ul {
+    li:hover {
+      transform: translateX(1em);
+
+      &::before {
+        content: '\25A0';
+        color: $wasabi;
+        margin: -0.1em 0 0 -1.5em;
+        float: left;
+      }
+    }
+
+    a {
+      font-size: 1.4rem;
+    }
+  }
 }
