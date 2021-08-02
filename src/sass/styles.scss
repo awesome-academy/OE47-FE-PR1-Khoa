@@ -1,11 +1,11 @@
-@use './base/sanitize' as *;
+@use './abstract/mixins' as *;
+@use './abstract/variables' as *;
+
 @use './base/bootstrap' as *;
 @use './base/functions' as *;
 @use './base/global' as *;
+@use './base/sanitize' as *;
 @use './base/typography' as *;
-
-@use './abstract/mixins' as *;
-@use './abstract/variables' as *;
 
 @use './layout/footer' as *;
 @use './layout/home-grid' as *;
@@ -15,8 +15,10 @@
 @use './layout/nav' as *;
 @use './layout/nav-cart-dropdown' as *;
 @use './layout/nav-product-dropdown' as *;
+@use './layout/form' as *;
 
-// @use './components/'
+@use './components/button' as *;
+@use './components/dash-slash' as *;
 
 @use './pages/index' as *;
 @use './pages/404' as *;

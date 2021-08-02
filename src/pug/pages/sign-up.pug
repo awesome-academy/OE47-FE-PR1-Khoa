@@ -1,0 +1,27 @@
+extends ../base/base
+
+block title
+  title Sign up
+
+block content
+  .container
+    +internalLink(ilSignUp)
+    h2 ĐĂNG KÝ
+    form.form--concrete.p-4.p-sm-5
+      h4 THÔNG TIN CÁ NHÂN
+      each item in firstSignUpInputs 
+        label(for= item.id).form-label= item.label
+        input(id= item.id type= item.type required).form-control
+      .form-check.mt-3
+        label.form-check-label
+          input.form-check-input(type='checkbox')
+          |  Đăng ký nhận bản tin
+      h4.pt-5 THÔNG TIN ĐĂNG NHẬP
+      each item in secondSignUpInputs
+        label(for= item.id).form-label= item.label
+        input(id= item.id type= item.type required).form-control
+      .sign-up-buttons
+        button.btn(type="submit").mx-0 Gửi
+        button.btn(type="reset").mx-0
+          img(src='./assets/back-arrow.png').me-1
+          | Quay lại

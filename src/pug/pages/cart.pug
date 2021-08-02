@@ -1,0 +1,36 @@
+extends ../base/base
+
+block title
+  title Cart
+
+block content 
+  .container
+    +internalLink(ilCart)
+    div
+      .table-responsive
+        h2 GIỎ HÀNG
+        table.table.table-bordered.align-middle.mb-4
+          tr
+            thead
+              th.table-secondary.col-2 ẢNH 
+              th.table-secondary.col-3 TÊN SẢN PHẨM 
+              th.table-secondary.col-2 GIÁ
+              th.table-secondary.col-2 SỐ LƯỢNG
+              th.table-secondary.col-2 TỔNG SỐ
+              th.table-secondary XÓA 
+          tbody
+            each item in cart
+              tr
+                td
+                  img(src= item.img, alt="item image")
+                td= item.name
+                td.table--price= item.price 
+                td= item.quantity 
+                td.table--price= item.totalPrice
+                td 
+                  a(href="") 
+                    img(src="assets/remove.png" alt="remove")
+      .d-flex.justify-content-end.pt-3
+        button.btn TIẾP TỤC MUA HÀNG
+        button.btn XÓA
+        button.btn CẬP NHẬT
