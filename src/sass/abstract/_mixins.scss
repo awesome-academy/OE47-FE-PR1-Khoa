@@ -20,7 +20,7 @@
   }
 }
 
-%dropdown {
+@mixin dropdown {
   overflow: hidden;
   opacity: 0;
   height: 0;
@@ -28,13 +28,34 @@
   position: absolute;
 }
 
-%dropdown-hover {
+@mixin dropdown-hover {
   opacity: 1;
   height: 28.1rem;
   border: 2px solid $wasabi;
+  background-color: $white;
+  z-index: 999;
 }
 
-%gray-line {
+@mixin list-item-hover {
+  ul {
+    li:hover {
+      transform: translateX(1em);
+
+      &::before {
+        content: '\25A0';
+        color: $wasabi;
+        margin: -0.1em 0 0 -1.5em;
+        float: left;
+      }
+    }
+
+    a {
+      font-size: 1.4rem;
+    }
+  }
+}
+
+@mixin gray-line {
   border-top: 2px solid $wild-sand;
   width: 100%;
   content: '';

@@ -1,11 +1,11 @@
-@use './abstract/mixins' as *;
-@use './abstract/variables' as *;
-
+@use './base/sanitize' as *;
 @use './base/bootstrap' as *;
 @use './base/functions' as *;
 @use './base/global' as *;
-@use './base/sanitize' as *;
 @use './base/typography' as *;
+
+@use './abstract/mixins' as *;
+@use './abstract/variables' as *;
 
 @use './layout/footer' as *;
 @use './layout/home-grid' as *;

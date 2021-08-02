@@ -1,21 +1,23 @@
 @use '../abstract/variables' as *;
 @use '../abstract/mixins' as *;
 
+@media screen and (min-width: 992px) {
+  .nav-cart > a {
+    padding: 2.4rem 2.2rem;
+  }
+}
+
 .nav-cart {
   padding: 2.2rem 0;
 
-  & > a {
-    padding: 2.4rem 2.2rem;
-  }
-
   &:hover > .cart-dropdown {
-    @extend %dropdown-hover;
+    @include dropdown-hover;
     padding: 1rem;
   }
 }
 
 .cart-dropdown {
-  @extend %dropdown;
+  @include dropdown;
   width: 20rem;
   top: 7rem;
   right: -3.5rem;
@@ -25,7 +27,7 @@
     flex-direction: column;
 
     &::after {
-      @extend %gray-line;
+      @include gray-line;
     }
   }
 
