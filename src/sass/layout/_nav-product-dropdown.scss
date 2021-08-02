@@ -1,0 +1,65 @@
+@use '../abstract/variables' as *;
+@use '../abstract/mixins' as *;
+
+.nav-product {
+  height: 60.8px;
+
+  & > a {
+    height: 60.8px;
+    display: flex;
+    align-items: center;
+  }
+
+  &:hover > .product-dropdown {
+    @extend %dropdown-hover;
+    padding: 3rem 4rem;
+  }
+}
+
+.product-dropdown {
+  @extend %dropdown;
+  width: 67.1rem;
+  top: 7.5rem;
+  right: 10rem;
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+
+    ul {
+      padding-left: 0;
+
+      li:hover {
+        transform: translateX(1em);
+
+        &::before {
+          content: '\25A0';
+          color: $wasabi;
+          display: inline-block;
+          margin: 0.4em 0 0 -1.5em;
+        }
+      }
+
+      a {
+        font-size: 1.4rem;
+        text-decoration: none;
+      }
+    }
+  }
+
+  &__category {
+    display: flex;
+    flex-direction: column;
+
+    h5 {
+      font-size: 1.4rem;
+    }
+
+    &::after {
+      @extend %gray-line;
+    }
+  }
+}
+
+@include product-dropdown-fix($xl, $xxl, 21rem);
+@include product-dropdown-fix($xxl, 9999px, 45rem);
