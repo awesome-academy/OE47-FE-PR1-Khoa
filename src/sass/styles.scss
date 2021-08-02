@@ -15,8 +15,10 @@
 @use './layout/nav' as *;
 @use './layout/nav-cart-dropdown' as *;
 @use './layout/nav-product-dropdown' as *;
+@use './layout/form' as *;
 
-// @use './components/'
+@use './components/button' as *;
+@use './components/dash-slash' as *;
 
 @use './pages/index' as *;
 @use './pages/404' as *;

@@ -1,0 +1,8 @@
+mixin internalLink(item)
+  .py-4
+    a(href="index.html") Home
+    each part in item 
+      a(href= part.url)
+        span.m-2 >
+        =part.name
+    hr.mb-5

@@ -8,7 +8,8 @@ include ../layout/nav-product-dropdown
 include ../layout/nav-link-dropdown
 include ../layout/nav
 include ../layout/pop-up
-
+include ../layout/internal-link
+include ../components/dash-slash
 
 doctype html
 html(lang="en")
@@ -20,6 +21,6 @@ html(lang="en")
   script(src="js/bootstrap.js") 
   block title
   body 
-    +nav 
+    +nav
     block content
-    //- +footer
+    +footer

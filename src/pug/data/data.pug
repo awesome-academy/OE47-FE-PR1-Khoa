@@ -1,8 +1,8 @@
 // Static Nav
--var trangChu = {name:'TRANG CHỦ',url:'index.html' }
--var gioiThieu = {name:'GIỚI THIỆU',url:'about-us.html' }
+-var trangChu = {name:'TRANG CHỦ',url:'index.html'}
+-var gioiThieu = {name:'GIỚI THIỆU',url:'about-us.html'}
 -var sanPham = {name:'SẢN PHẨM',url:'products.html',hasDropdown:{componentMixinName:productDropdown,bonusClass:'nav-product'}}
--var tinTuc = {name:'TIN TỨC',url:'' }
+-var tinTuc = {name:'TÀI KHOẢN',url:'profile.html'}
 -var blog = {name:'BLOG',url:'blog.html' }
 -var lienHe = {name:'LIÊN HỆ',url:'contact.html'}
 -var navLinks = [trangChu,gioiThieu,sanPham,tinTuc,blog,lienHe]
@@ -14,8 +14,36 @@
 -var productDropdown = [{category: 'DƯỠNG DA', content:duongDa},{category: 'NƯỚC HOA', content:nuocHoa},{category: 'TRANG SỨC', content:trangSuc}]
 
 // Footer List
--var chuyenHang = ['Mua sắm trực tuyến', 'Đến từ chúng tôi gữi đến', 'Chính sách vận chuyển', 'Vận chuyển thông tin'];
+-var chuyenHang = ['Mua sắm trực tuyến', 'Đến từ chúng tôi gửi đến', 'Chính sách vận chuyển', 'Vận chuyển thông tin'];
 -var hoTro = ['Cậu chuyện của chúng ta', 'Thanh toán an toàn', 'Tùy chọn vận chuyển', 'Chính sách vận chuyển'];
--var thongTin = ['Về chúng tôi', 'Điều khoản và điều kiện', 'Chính sách riêng tư', 'Đơn đặt hàng và Returns'];
--var account = ['Xem giỏ hàng', 'Sản phẩm yêu thích', 'Kiểm tra', 'Theo dõi đặt hàng của tôi'];
--var sections = [{category: 'Chuyển hàng', content: chuyenHang}, {category: 'Hỗ trợ', content: hoTro}, {category: 'Thông tin', content: thongTin}, {category: 'My Account', content: account}];
+-var thongTin = [{name:'Về chúng tôi',url:'about-us.html'}, 'Điều khoản và điều kiện', 'Chính sách riêng tư', 'Đơn đặt hàng và Returns'];
+-var account = [{name:'Xem giỏ hàng',url:'cart.html'}, {name:'Tài khoản',url:'profile.html'}, {name:'Đăng ký',url:'sign-up.html'}, {name:'Đăng nhập',url:'sign-in.html'}];
+-var footerSections = [{category: 'Chuyển hàng', content: chuyenHang}, {category: 'Hỗ trợ', content: hoTro}, {category: 'Thông tin', content: thongTin}, {category: 'My Account', content: account}];
+
+// Internal Link
+-var ilCart = [{name:'Giỏ hàng',url:'cart.html'}]
+-var ilProfile = [{name:'Tài khoản',url:'profile.html'}]
+-var ilSignUp = [{name:'Đăng ký',url:'sign-up.html'}]
+-var ilSignIn = [{name:'Đăng nhập',url:'sign-in.html'}]
+-var ilAboutUs = [{name:'Về chúng tôi',url:'about-us.html'}]
+-var ilProducts = [{name:'Sản phẩm',url:'products.html'},{name:'Trang sức',url:'products.html'}]
+-var ilProductDetail = [{name:'Sản phẩm',url:'products.html'},{name:'Trang sức',url:'products.html'},{name:'Lắc tay',url:''}]
+-var ilBlog = [{name:'Blog',url:'blog.html'}]
+-var ilBlogDetail = [{name:'Blog',url:'blog.html'},{name:'Nàng béo không ngại diện váy áo nổi bật',url:''}]
+-var ilContact = [{name:'Liên hệ',url:'contact.html'}]
+
+// Cart
+-var cart = [{img:'assets/cart-item.png',name:'Lắc tay D&G',price:'345.000đ',quantity:1, totalPrice:'345.000đ'},{img:'assets/cart-item.png',name:'Lắc tay D&G',price:'345.000đ',quantity:2, totalPrice:'690.000đ'}]
+
+// Profile
+-var profile = [{order:'#1006',date:'May 13, 2013',status:'Đã thanh toán',total:'350.000đ',debt:0},{order:'#1006',date:'May 13, 2013',status:'Đã thanh toán',total:'350.000đ',debt:0},{order:'#1006',date:'May 13, 2013',status:'Đã thanh toán',total:'350.000đ',debt:0},{order:'#1006',date:'May 13, 2013',status:'Thanh toán 50%',total:'350.000đ',debt:'175.000đ'},]
+
+// Sign up
+-var firstSignUpInputs = [{id:'firstName',label:'Tên trước',type:'text'},{id:'lastName',label:'Tên sau',type:'text'},{id:'email',label:'Email',type:'email'},{id:'password',label:'Mật khẩu',type:'password'}]
+-var secondSignUpInputs = [{id:'2nd-password',label:'Mật khẩu',type:'password'},{id:'confirm-pasword',label:'Xác nhận mật khẩu',type:'password'}]
+
+// Sign in
+-var signInInputs = [{id:'email',label:'Địa chỉ email',type:'email'},{id:'password',label:'Password',type:'password'}]
+
+// Contact
+-var contactInputs = [{id:'name',label:'Tên',type:'text'}, {id:'email',label:'Email',type:'email'},{id:'message',label:'Tin nhắn',rows:10}]
