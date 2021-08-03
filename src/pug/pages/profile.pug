@@ -1,0 +1,41 @@
+extends ../base/base
+
+block title
+  title Cart
+
+block content 
+  .container
+    +internalLink(ilCart)
+    .row.mb-5
+      .table-responsive.col-md-9
+        h2 TÀI KHOẢN
+        table.table.table-bordered.align-middle.mb-4
+          tr
+            thead
+              th.table-secondary.col-2 ORDER 
+              th.table-secondary.col-3 DATE
+              th.table-secondary.col-3 TÌNH TRẠNG THANH TOÁN
+              th.table-secondary.col-2 TỔNG
+              th.table-secondary.col-2 NỢ
+          tbody
+            each item in profile
+              tr
+                td.py-4= item.order 
+                td= item.date
+                td.table--status= item.status 
+                td.table--price= item.total
+                td.table--price= item.debt
+      .col-md-3.ps-md-5
+        .profile-detail-heading
+          h4.mb-2 CHI TIẾT TÀI KHOẢN
+        .profile-detail.mb-1
+          img(src="assets/user-black.png" alt="user icon")
+          h3.mb-0 GiangLe
+        p.mb-5 giangle89@gmail.com
+        .profile-detail.align-items-start
+          img(src="assets/mark-black.png" alt="mark icon")
+          p Tòa nhà Hà Nội group 442 Đội&nbsp;Cấn, Ba&nbsp;Đình Hà&nbsp;Nội
+        .profile-detail 
+          img(src="assets/telephone-black.png" alt="telephone icon")
+          p (04) 3786 8904
+
