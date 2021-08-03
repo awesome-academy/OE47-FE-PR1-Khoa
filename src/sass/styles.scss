@@ -19,6 +19,10 @@
 
 @use './components/button' as *;
 @use './components/dash-slash' as *;
+@use './components/tags' as *;
+@use './components/contact-form' as *;
+@use './components/blog-article' as *;
+@use './components/toggle-pageSelection' as *;
 
 @use './pages/index' as *;
 @use './pages/404' as *;
