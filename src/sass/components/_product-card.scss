@@ -1,0 +1,26 @@
+@use '../abstract/variables' as *;
+
+.product-card {
+  display: flex;
+  flex-direction: column;
+  margin: 5rem 0;
+
+  p {
+    text-align: center;
+  }
+
+  p.price {
+    font-size: 1.8rem;
+    color: $wasabi;
+  }
+
+  span.ms-2.silver {
+    text-decoration: line-through;
+  }
+
+  .line {
+    border-top: 1px solid $black;
+    width: 20%;
+    margin: 0 auto 1rem;
+  }
+}

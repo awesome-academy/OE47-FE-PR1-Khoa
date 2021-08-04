@@ -1,0 +1,27 @@
+extends ../base/base-products
+
+block title 
+  title Products
+
+block content
+  .products-list.gx-5
+    each item in products
+      if item.onPage1
+        .products-list__item.row
+          .col-md-4
+            img.img-fluid.mx-auto.d-block(src=item.src, alt="product image")
+            hr.d-md-none
+          .col-md-8.d-flex.flex-column
+            p.bold.product-card__name= item.name
+              span.bold.product-card__name &nbsp;thương hiệu&nbsp;
+                =item.brand
+            .d-flex.align-items-center.mb-3
+              -for (var i = 0; i<5; ++i){
+                i.me-1(class="fas fa-heart fa-lg")
+              -}
+              p.silver.mb-0.ms-3 (4 lượt mua)
+            p.silver Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vitae ut sed alias consectetur consequuntur, neque, et numquam quia doloribus debitis ducimus eos a aspernatur! Incidunt cumque autem ipsa voluptas consequuntur.
+            p.price= item.price 
+              if item.price2 
+                span.ms-2.silver.price= item.price2
+            +shopping-buttons

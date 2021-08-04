@@ -1,7 +1,7 @@
 // Static Nav
 -var trangChu = {name:'TRANG CHỦ',url:'index.html'}
 -var gioiThieu = {name:'GIỚI THIỆU',url:'about-us.html'}
--var sanPham = {name:'SẢN PHẨM',url:'products.html',hasDropdown:{componentMixinName:productDropdown,bonusClass:'nav-product'}}
+-var sanPham = {name:'SẢN PHẨM',url:'products-grid.html',hasDropdown:{componentMixinName:productDropdown,bonusClass:'nav-product'}}
 -var tinTuc = {name:'TÀI KHOẢN',url:'profile.html'}
 -var blog = {name:'BLOG',url:'blog.html' }
 -var lienHe = {name:'LIÊN HỆ',url:'contact.html'}
@@ -56,3 +56,53 @@
 
 // BLog articles
 -var blogArticles = [{src:'assets/blog1.png'},{src:'assets/blog2.png'},{src:'assets/blog3.png'},{src:'assets/blog4.png',lg:1},{src:'assets/blog5.png',lg:1},{src:'assets/blog6.png',lg:1},{src:'assets/blog7.png',xl:1},{src:'assets/blog8.png',xl:1},{src:'assets/blog9.png',xl:1}]
+
+// Aside products groups
+-var asideGroups = [{category:'MỸ PHẨM'},{category:'TRANG SỨC',items:['Vòng tay','Nhẫn','Lắc chân','Phụ kiện khác']},{category:'PHỤ KIỆN'},{category:'NƯỚC HOA'}]
+
+// Product items
+-
+  var products = [
+    {
+      src: 'assets/product1.png',
+      brand:'Brand 1',
+      name:'Mỹ phẩm châu Âu',
+      price:'355.000đ',
+      price2:'450.000đ',
+      onPage1:1
+    },
+    {
+      src: 'assets/product2.png',
+      brand:'Brand 2',
+      name:'Mỹ phẩm châu Âu',
+      price:'355.000đ',
+      onPage1:1
+    },
+    {
+      src: 'assets/product3.png',
+      brand:'Brand 3',
+      name:'Mỹ phẩm Hàn Quốc',
+      price:'355.000đ',
+      onPage1:1
+    },
+    {
+      src: 'assets/product1.png',
+      brand:'Brand 4',
+      name:'Mỹ phẩm Hàn Quốc',
+      price:'355.000đ',
+    },
+    {
+      src: 'assets/product2.png',
+
+      brand:'Brand 5',
+      name:'Mỹ phẩm Úc',
+      price:'355.000đ',
+      price2:'450.000đ',
+    },
+    {
+      src: 'assets/product3.png',
+      brand:'Brand 6',
+      name:'Mỹ phẩm Úc',
+      price:'355.000đ',
+    }
+  ]

@@ -1,0 +1,71 @@
+include ../data/data
+include ../layout/footer
+include ../layout/home-carousel
+include ../layout/home-grid
+include ../layout/home-hero
+include ../layout/nav-cart-dropdown
+include ../layout/nav-product-dropdown
+include ../layout/nav-link-dropdown
+include ../layout/nav
+include ../layout/pop-up
+include ../layout/internal-link
+include ../components/dash-slash
+include ../components/tags
+include ../components/contact-form
+include ../components/blog-article
+include ../components/toggle-pageSelection
+include ../components/shopping-buttons
+include ../components/product-card
+
+doctype html
+html(lang="en")
+  meta(charset="UTF-8")
+  meta(http-equiv="X-UA-Compatible" content="IE=edge")
+  meta(name="viewport" content="width=device-width, initial-scale=1.0")
+  script(src='https://kit.fontawesome.com/028dbdff64.js' crossorigin='anonymous')
+  link(rel="stylesheet" href="css/styles.css")
+  script(src="js/bootstrap.js") 
+  block title
+  body.products-page 
+    +nav
+    .container
+      +internalLink(ilProducts)
+    img#banner(src="assets/banner.png" alt="banner").d-none.d-lg-block.img-fluid
+    .container
+      .products.row 
+        aside.d-flex.flex-column.col-lg-3.mb-5
+          .mb-5
+            .products__aside-section
+              .products__aside-title
+                i.me-2(class="fas fa-bars fa-lg")
+                h4 DANH MỤC SẢN PHẨM
+            each group in asideGroups 
+              .products__aside-section
+                if !group.items
+                  .products__aside-title.justify-content-between
+                    h5= group.category
+                    i(class="fas fa-caret-right fa-lg")
+                else 
+                  .products__aside-title.justify-content-between
+                    h5= group.category
+                    i(class="fas fa-caret-down fa-lg")
+                  ul.products__aside-list
+                    each item in group.items 
+                      li 
+                        a(href="product-detail.html") 
+                          = item
+          .mb-5
+            .products__aside-section
+              .products__aside-title
+                h4 SO SÁNH SẢN PHẨM
+            p.roboto.mt-3.mb-5 Bạn chưa có sản phẩm nào để so sánh
+          .products__aside-section
+            .products__aside-title
+              h4 TAG SẢN PHẨM 
+          +tags
+          img.mt-5.d-none.d-lg-block(src="assets/aside.png" alt="")
+        .col-lg-9
+          +toggle-pageSelection('products-grid.html','products-list.html')
+          block content
+          +toggle-pageSelection('products-grid.html','products-list.html')
+    +footer
