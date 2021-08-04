@@ -6,3 +6,17 @@ block title
 block content
   .container
     +internalLink(ilBlog)
+    +toggle-pageSelection('blog.html')
+    h2 BLOG
+    .blog.row.g-5
+      each article in blogArticles
+        if article.xl
+          .col-12.col-lg-6.col-xl-4.d-none.d-xl-block
+            +blog-article(article.src,'Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio illum ipsam deleniti harum reiciendis et exercitationem nihil delectus repudiandae expedita.')
+        else if article.lg 
+          .col-12.col-lg-6.col-xl-4.d-none.d-lg-block
+            +blog-article(article.src,'Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio illum ipsam deleniti harum reiciendis et exercitationem nihil delectus repudiandae expedita.')
+        else  
+          .col-12.col-lg-6.col-xl-4
+            +blog-article(article.src,'Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio illum ipsam deleniti harum reiciendis et exercitationem nihil delectus repudiandae expedita.')
+    +toggle-pageSelection('blog.html')

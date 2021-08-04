@@ -1,0 +1,14 @@
+mixin toggle-pageSelection(gridPage,listPage)
+  .toggle-page
+    .d-flex.justify-content-between
+      .toggle
+        a(href= gridPage)  
+          img.me-3(src="assets/grid.png" alt="grid toggle")
+        a(href= listPage)   
+          img(src="assets/list.png" alt="list toggle")
+      .page-selection 
+        i.me-3(class="fas fa-caret-left fa-2x")
+        a(href="") 1 
+        a(href="").mx-2 2 
+        a(href="") 3
+        i.ms-3(class="fas fa-caret-right fa-2x")
