@@ -6,3 +6,34 @@ block title
 block content
   .container
     +internalLink(ilBlogDetail)
+    h2.d-none.d-lg-block.mb-5 Blog 
+    .blog-detail.row 
+      .col-3.d-none.d-lg-flex
+        aside
+          .aside__section-title
+            h4.mb-0 BÀI VIẾT MỚI NHẤT
+          each article in blogDetailArticles
+            .row.my-5
+              a.col-6(href="") 
+                img.img-fluid(src= article.src, alt="blog thumbnail")
+              .col-6
+                p.h3.bold= article.date 
+                  span &nbsp;/ Tháng 
+                    = article.month 
+                p.more Đăng bởi&nbsp;
+                  span.more= article.author
+          .aside__section-title.mt-5
+            h4.mb-0 BLOG TAGS
+          +tags
+          .aside__section-title.mt-5
+            H4.mb-0 LASTEST VIDEO
+          img.img-fluid(src="assets/video.png" alt="video thumbnail")
+      .col-12.col-lg-9
+        +blog-article('assets/blog1.png','Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eum unde dolor, enim dolorem blanditiis quia accusantium odio porro adipisci nisi minima vitae nulla at itaque dignissimos laboriosam? Eaque porro, perspiciatis repellat quia, tempora nemo maxime facilis corporis praesentium sint alias. Et blanditiis aspernatur sunt. Nostrum iusto est totam obcaecati molestias reiciendis officia sed, perferendis suscipit officiis tempora rerum laudantium asperiores animi omnis explicabo, praesentium sit! Explicabo necessitatibus, dolorem nobis dolores ratione nesciunt facere atque doloremque.')
+        .blog-detail__article-tag
+          p 
+            span.me-2 Tag:
+            a.tag(href="blog.html") Men
+        h4.mt-5 ĐÓNG GÓP Ý KIẾN
+        +contact-form
+

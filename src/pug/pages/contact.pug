@@ -12,13 +12,4 @@ block content
         img.img-fluid(src="assets/map.png")
       .col-lg-6.mt-4.mt-lg-0
         h4 GỬI EMAIL CHO CHÚNG TÔI
-        form.contact-form
-          each item in contactInputs
-            .row 
-              label.form-label(for= item.id)= item.label 
-              if !item.rows
-                input(id= item.id type= item.type).form-control
-              else 
-                textarea(id= item.id type='text' rows= item.rows).form-control
-          .d-flex.justify-content-end
-            button.btn(type="submit") Gửi
+        +contact-form
