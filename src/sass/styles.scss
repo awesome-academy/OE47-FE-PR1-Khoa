@@ -16,6 +16,7 @@
 @use './layout/nav-cart-dropdown' as *;
 @use './layout/nav-product-dropdown' as *;
 @use './layout/form' as *;
+@use './layout/base-products' as *;
 
 @use './components/button' as *;
 @use './components/dash-slash' as *;
@@ -23,6 +24,8 @@
 @use './components/contact-form' as *;
 @use './components/blog-article' as *;
 @use './components/toggle-pageSelection' as *;
+@use './components/shopping-buttons' as *;
+@use './components/product-card' as *;
 
 @use './pages/index' as *;
 @use './pages/404' as *;
@@ -36,3 +39,5 @@
 @use './pages/profile' as *;
 @use './pages/sign-in' as *;
 @use './pages/sign-up' as *;
+@use './pages/products-grid' as *;
+@use './pages/products-list' as *;
