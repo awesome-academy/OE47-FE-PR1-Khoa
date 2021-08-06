@@ -1,4 +1,5 @@
 @use '../abstract/variables' as *;
+@use '../abstract/mixins' as *;
 
 a {
   color: $cod-gray;
@@ -21,4 +22,13 @@ nav + div {
 
 table > * {
   text-align: center;
+}
+
+.gray-line-section {
+  flex-direction: column;
+  display: flex;
+
+  &::after {
+    @include gray-line;
+  }
 }

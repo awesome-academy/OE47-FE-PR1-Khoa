@@ -17,7 +17,11 @@ button,
 td,
 th,
 .form-control,
-label.form-label div {
+label,
+option,
+select,
+.form-select,
+div {
   font-family: $open-sans;
   color: $black;
 }
@@ -29,8 +33,12 @@ span,
 th,
 td,
 .form-control,
+.form-select,
 h5,
-.h5 {
+.h5,
+label,
+option,
+select {
   font-size: 1.4rem;
 }
 

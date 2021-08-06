@@ -1,0 +1,13 @@
+mixin detail-aside-item
+  .detail__aside-item.row.mb-3
+    .col-4
+      img.img-fluid.mx-auto.d-block.w-100(src='assets/detail1.png' alt="product image")
+      hr.d-md-none
+    .col-8.d-flex.flex-column
+      p.bold.product-card__name Mỹ phẩm Châu Âu
+      .d-flex.align-items-center.mb-3
+        -for (var i = 0; i<5; ++i){
+          i.me-1(class="fas fa-heart fa-lg")
+        -}
+        p.silver.mb-0.ms-2 (4 lượt mua)
+      p.price 355.000đ

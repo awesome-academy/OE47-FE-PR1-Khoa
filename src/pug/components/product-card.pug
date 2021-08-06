@@ -1,11 +1,12 @@
 mixin product-card(item)
-    .product-card
-        img.img-fluid(src= item.src, alt="product image")
-        hr
-        p.silver.bold.text-uppercase= item.brand
-        p.bold.product-card__name= item.name
-        .line
-        p.price= item.price 
-            if item.price2 
-                span.ms-2.silver.price= item.price2
-        +shopping-buttons
+  .product-card
+    a(href="product-detail.html") 
+      img.img-fluid(src= item.src, alt="product image")
+    hr
+    p.silver.bold.text-uppercase= item.brand
+    p.bold.product-card__name= item.name
+    .line
+    p.price= item.price 
+      if item.price2 
+        span.ms-2.silver.price= item.price2
+    +shopping-buttons

@@ -6,3 +6,76 @@ block title
 block content
   .container 
     +internalLink(ilProductDetail)
+    .detail
+      .row
+        .row.col-lg-6.mb-5
+          .col-3.d-flex.flex-column.align-items-center.justify-content-center
+            a(href='#')
+              img(src="assets/arrow-up.png" alt="arrow up")
+            each image in detailImages
+              a(href='#')
+                img.detail__images(src= image)
+            a(href='#')
+              img(src="assets/arrow-down.png" alt="arrow down")
+          .col-9.my-auto
+            img.img-fluid(src='assets/detail-thumbnail.png')
+        .detail__summary.col-lg-6
+          h2.text-uppercase.mb-1 Lắc tay Gucci xu hướng mới nhất
+          p  Gucci Ms 3201
+          p.price 955.000đ
+            span.price.ms-2.silver 800.000đ
+          p.mb-5 Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad, aspernatur veniam dolore nostrum inventore, nulla perferendis aut minima dicta sapiente perspiciatis eos neque odit similique odio aliquam repellendus est. Rerum in dignissimos nemo, quasi molestiae iure, velit ab quae sunt fugiat optio. Enim quibusdam quasi quas aliquid vitae ratione tempore, doloribus quisquam recusandae velit sit veritatis atque pariatur quia ea inventore necessitatibus esse! Expedita error incidunt a aperiam obcaecati repellat!
+          label.detail__label(for='color') Màu sắc
+          select.form-select.form-select-lg
+            option(value='Màu bạc') Màu bạc
+            option(value='Màu vàng') Màu vàng
+          label.detail__label(for='size select') Size
+          select.form-select.form-select-lg
+            option(value='12') 12
+            option(value='13') 13
+          label.detail__label(for='size select') Số lượng
+          input.form-control.form-control-lg(type='number')
+          +shopping-buttons
+          .detail__summary-footer.mb-5
+            p Shipping &amp; 
+              span Returns
+            img(src='assets/social.png' alt="social")
+      main.row
+        .detail__main.col-xl-9
+          .gray-line-section.mb-5
+            .detail__link
+              a(href="#").active ĐẶC ĐIỂM NỔI BẬT
+              a(href="#").mx-5 THÔNG TIN SẢN PHẨM
+              a(href="#") ĐÁNH GIÁ
+          each item in detailContent
+            if !item.right
+              .detail__content.row.justify-content-between.align-items-center
+                .col-md-4.order-md-1
+                  img.img-fluid.w-100.mb-3.float-md-end(src= item.src, alt="product image")
+                .col-md-7
+                  .gray-line-section
+                    p.mb-0 THE MARK OF A LEGEND
+                  p.silver Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit odit aliquam necessitatibus perspiciatis nam tempora tempore maxime in officia, quae at dolor. Et amet deserunt commodi, suscipit, eligendi dolor similique omnis rem quae repellat harum, autem ipsam aspernatur consequuntur animi repellendus. Nulla, veniam. Tempora earum ut, aliquid quam laborum molestiae?
+            else 
+              .detail__content(class= item.right).row.justify-content-between.align-items-center
+                .col-md-4
+                  img.img-fluid.w-100.mb-3.float-end.float-md-start(src= item.src, alt="product image")
+                .col-md-7.ms-auto
+                  .gray-line-section
+                    p.mb-0.text-end THE MARK OF A LEGEND
+                  p.silver.text-end Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit odit aliquam necessitatibus perspiciatis nam tempora tempore maxime in officia, quae at dolor. Et amet deserunt commodi, suscipit, eligendi dolor similique omnis rem quae repellat harum, autem ipsam aspernatur consequuntur animi repellendus. Nulla, veniam. Tempora earum ut, aliquid quam laborum molestiae?
+        aside.col-xl-3.d-none.d-xl-block
+          .detail__aside-items
+            .gray-line-section.mb-3
+              .detail__link
+                a(href="#") SẢN PHẨM BÁN CHẠY
+            -for (var i = 0; i<3; ++i){
+              +detail-aside-item
+            -}
+          .detail__aside-items
+            .gray-line-section.mb-3
+              .detail__link
+                a(href="#") SẢN PHẨM MUA NHIỀU
+            -for (var i = 0; i<4; ++i){
+              +detail-aside-item
+            -}
