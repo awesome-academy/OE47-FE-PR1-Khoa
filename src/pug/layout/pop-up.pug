@@ -1,0 +1,15 @@
+mixin popup
+  .popup
+  input(type="checkbox" name="")#popup__checkbox
+  .popup__content
+    label(for="popup__checkbox").popup__close-button X
+    img.popup__img(src='assets/popup.png')
+    h4.popup__header.bold.text-center.d-none.d-sm-block GỬI EMAIL
+      br
+      span
+        | Hãy gửi chúng tôi email của bạn để được tư vấn tốt nhất
+        br
+        |  Sự hài lòng của bạn là thành công của chúng tôi
+    input.popup__input.form-control(type='email' text-holder='')
+    a.popup__submit(href='#').text-center GỬI EMAIL
+      span.d-sm-none &nbsp;để được tư vấn tốt nhất 

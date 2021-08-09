@@ -7,6 +7,9 @@ a {
 
 a:hover {
   color: $wasabi !important;
+  span {
+    color: $wasabi;
+  }
 }
 
 ol,
@@ -31,4 +34,28 @@ table > * {
   &::after {
     @include gray-line;
   }
+}
+
+.mb-6 {
+  margin-bottom: 5rem !important;
+}
+
+.mb-7 {
+  margin-bottom: 7rem !important;
+}
+
+.mt-6 {
+  margin-top: 5rem !important;
+}
+
+.mt-7 {
+  margin-top: 7rem !important;
+}
+
+.pb-6 {
+  padding-bottom: 5rem !important;
+}
+
+.pt-6 {
+  padding-top: 5rem !important;
 }

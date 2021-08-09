@@ -1,0 +1,18 @@
+mixin grid
+  .grid.container
+    .grid__header.row.mb-6
+      each item in gridHeader
+        .col-md-4
+          .grid__header-item.mx-auto.d-flex.flex-md-column.align-items-center
+            i(class= item.class).fa.fa-5x.mb-3.me-3
+            p.bold.text-center= item.content
+          hr.d-md-none.mx-auto
+    .grid__main.row.mb-5
+      .col-md-6
+        img.w-100(src="assets/grid1.png" alt="shopping images").mb-3
+        img.w-100(src="assets/grid2.png" alt="shopping images").mb-5
+      img(src="assets/grid3.png" alt="shopping images").mb-5.col-md-6
+      img(src="assets/grid4.png" alt="shopping images").mb-5.col-md-6
+      .col-md-6
+        img.w-100(src="assets/grid5.png" alt="shopping images").mb-3
+        img.w-100(src="assets/grid6.png" alt="shopping images")

@@ -1,12 +1,6 @@
 @use '../abstract/variables' as *;
 @use '../abstract/mixins' as *;
 
-@media screen and (max-width: $sm) {
-  .blog-title {
-    font-size: 2rem;
-  }
-}
-
 .blog-section {
   display: flex;
   flex-direction: column;

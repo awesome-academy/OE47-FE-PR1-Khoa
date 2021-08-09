@@ -7,16 +7,17 @@
 @use './base/sanitize' as *;
 @use './base/typography' as *;
 
+@use './layout/nav' as *;
 @use './layout/footer' as *;
 @use './layout/home-grid' as *;
 @use './layout/home-hero' as *;
-@use './layout/home_carousel' as *;
+@use './layout/home-carousel' as *;
 @use './layout/pop-up' as *;
-@use './layout/nav' as *;
 @use './layout/nav-cart-dropdown' as *;
 @use './layout/nav-product-dropdown' as *;
 @use './layout/form' as *;
 @use './layout/base-products' as *;
+@use './layout/home-footer' as *;
 
 @use './components/button' as *;
 @use './components/dash-slash' as *;

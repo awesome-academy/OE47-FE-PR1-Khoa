@@ -48,13 +48,7 @@
   }
 
   &__link {
-    display: flex;
-    overflow: scroll;
-
-    &::-webkit-scrollbar {
-      display: none;
-    }
-
+    @include scroll-enable;
     a {
       font-size: 1.6rem;
       color: $silver-chalice;
