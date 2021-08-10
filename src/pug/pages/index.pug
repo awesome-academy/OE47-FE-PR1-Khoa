@@ -1,7 +1,15 @@
 extends ../base/base
 
+block body 
+  +body('home')
+
 block title
   title Home
 
 block content
-  +dashSlash
+  +popup
+  .home-content
+    +hero
+    +grid
+    +carousel
+    +home-footer

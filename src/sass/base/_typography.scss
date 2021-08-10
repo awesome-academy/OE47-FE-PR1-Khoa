@@ -1,5 +1,5 @@
 @use '../abstract/variables' as *;
-@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Open+Sans:wght@400;700&family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Open+Sans:wght@400;600;700&family=Roboto&display=swap');
 html {
   font-size: 62.5%;
 }
@@ -21,6 +21,7 @@ label,
 option,
 select,
 .form-select,
+form,
 div {
   font-family: $open-sans;
   color: $black;
@@ -38,7 +39,8 @@ h5,
 .h5,
 label,
 option,
-select {
+select,
+form {
   font-size: 1.4rem;
 }
 
@@ -74,6 +76,10 @@ label.form-check-label {
 
 .italic {
   font-style: italic;
+}
+
+.semi-bold {
+  font-weight: 600;
 }
 
 .silver,

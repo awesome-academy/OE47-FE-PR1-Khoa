@@ -1,14 +1,4 @@
 include ../data/data
-include ../layout/footer
-include ../layout/home-carousel
-include ../layout/home-grid
-include ../layout/home-hero
-include ../layout/nav-cart-dropdown
-include ../layout/nav-product-dropdown
-include ../layout/nav-link-dropdown
-include ../layout/nav
-include ../layout/pop-up
-include ../layout/internal-link
 include ../components/dash-slash
 include ../components/tags
 include ../components/contact-form
@@ -17,6 +7,18 @@ include ../components/toggle-pageSelection
 include ../components/shopping-buttons
 include ../components/product-card
 include ../components/detail-aside-item
+include ../layout/footer
+include ../layout/home-carousel
+include ../layout/home-grid
+include ../layout/home-hero
+include ../layout/home-footer
+include ../layout/nav-cart-dropdown
+include ../layout/nav-product-dropdown
+include ../layout/nav-link-dropdown
+include ../layout/nav
+include ../layout/pop-up
+include ../layout/internal-link
+include ../layout/page-body
 
 doctype html
 html(lang="en")
@@ -25,9 +27,6 @@ html(lang="en")
   meta(name="viewport" content="width=device-width, initial-scale=1.0")
   script(src='https://kit.fontawesome.com/028dbdff64.js' crossorigin='anonymous')
   link(rel="stylesheet" href="css/styles.css")
-  script(src="js/bootstrap.js") 
+  script(src="js/bootstrap.js")
   block title
-  body 
-    +nav
-    block content
-    +footer
+  block body

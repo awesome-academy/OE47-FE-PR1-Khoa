@@ -1,0 +1,12 @@
+mixin body(className = '')
+  case className
+    when 'home'
+      body.home 
+        +nav
+        block content
+        +footer
+    default
+      body 
+        +nav
+        block content
+        +footer     

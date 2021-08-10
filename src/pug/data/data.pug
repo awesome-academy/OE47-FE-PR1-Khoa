@@ -26,8 +26,8 @@
 -var ilSignUp = [{name:'Đăng ký',url:'sign-up.html'}]
 -var ilSignIn = [{name:'Đăng nhập',url:'sign-in.html'}]
 -var ilAboutUs = [{name:'Về chúng tôi',url:'about-us.html'}]
--var ilProducts = [{name:'Sản phẩm',url:'products.html'},{name:'Trang sức',url:'products.html'}]
--var ilProductDetail = [{name:'Sản phẩm',url:'products.html'},{name:'Trang sức',url:'products.html'},{name:'Lắc tay',url:''}]
+-var ilProducts = [{name:'Sản phẩm',url:'products-grid.html'},{name:'Trang sức',url:'products-grid.html'}]
+-var ilProductDetail = [{name:'Sản phẩm',url:'products-grid.html'},{name:'Trang sức',url:'products-grid.html'},{name:'Lắc tay',url:''}]
 -var ilBlog = [{name:'Blog',url:'blog.html'}]
 -var ilBlogDetail = [{name:'Blog',url:'blog.html'},{name:'Nàng béo không ngại diện váy áo nổi bật',url:''}]
 -var ilContact = [{name:'Liên hệ',url:'contact.html'}]
@@ -62,51 +62,55 @@
 
 // Product items
 -
-  var products = [
-    {
-      src: 'assets/product1.png',
-      brand:'Brand 1',
-      name:'Mỹ phẩm châu Âu',
-      price:'355.000đ',
-      price2:'450.000đ',
-      onPage1:1
-    },
-    {
-      src: 'assets/product2.png',
-      brand:'Brand 2',
-      name:'Mỹ phẩm châu Âu',
-      price:'355.000đ',
-      onPage1:1
-    },
-    {
-      src: 'assets/product3.png',
-      brand:'Brand 3',
-      name:'Mỹ phẩm Hàn Quốc',
-      price:'355.000đ',
-      onPage1:1
-    },
-    {
-      src: 'assets/product1.png',
-      brand:'Brand 4',
-      name:'Mỹ phẩm Hàn Quốc',
-      price:'355.000đ',
-    },
-    {
-      src: 'assets/product2.png',
+      var products = [
+            {
+                  src: 'assets/product1.png',
+                  brand:'Brand 1',
+                  name:'Mỹ phẩm châu Âu',
+                  price:'355.000đ',
+                  price2:'450.000đ',
+                  highPiority:1
+            },
+            {
+                  src: 'assets/product2.png',
+                  brand:'Brand 2',
+                  name:'Mỹ phẩm châu Âu',
+                  price:'355.000đ',
+                  highPiority:1
+            },
+            {
+                  src: 'assets/product3.png',
+                  brand:'Brand 3',
+                  name:'Mỹ phẩm Hàn Quốc',
+                  price:'355.000đ',
+                  highPiority:1
+            },
+            {
+                  src: 'assets/product1.png',
+                  brand:'Brand 4',
+                  name:'Mỹ phẩm Hàn Quốc',
+                  price:'355.000đ',
+                  highPiority:1
+            },
+            {
+                  src: 'assets/product2.png',
 
-      brand:'Brand 5',
-      name:'Mỹ phẩm Úc',
-      price:'355.000đ',
-      price2:'450.000đ',
-    },
-    {
-      src: 'assets/product3.png',
-      brand:'Brand 6',
-      name:'Mỹ phẩm Úc',
-      price:'355.000đ',
-    }
-  ]
+                  brand:'Brand 5',
+                  name:'Mỹ phẩm Úc',
+                  price:'355.000đ',
+                  price2:'450.000đ',
+            },
+            {
+                  src: 'assets/product3.png',
+                  brand:'Brand 6',
+                  name:'Mỹ phẩm Úc',
+                  price:'355.000đ',
+            }
+      ]
 
 // Product Detail
 -var detailImages = ['assets/detail1.png','assets/detail2.png','assets/detail3.png','assets/detail4.png']
 -var detailContent = [{src:'assets/detail5.png'},{src:'assets/detail6.png',right:'detail__content--right'},{src:'assets/detail7.png'},{src:'assets/detail8.png',right:'detail__content--right'}]
+
+// Home
+-var gridHeader = [{class:'fa-plane',content:'Miễn phí vận chuyển trên toàn quốc'},{class:'fa-gift',content:'Nhận ngay quà tặng trị giá 350.000đ'},{class:'fa-star',content:'Giảm 30% cho đơn hàng trên 5.000.000đ'}]

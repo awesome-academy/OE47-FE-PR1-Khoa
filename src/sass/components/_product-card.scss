@@ -1,26 +1,36 @@
 @use '../abstract/variables' as *;
 
 .product-card {
-  display: flex;
-  flex-direction: column;
-  margin: 5rem 0;
-
-  p {
-    text-align: center;
+  > .shopping-buttons {
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.4s;
   }
 
-  p.price {
-    font-size: 1.8rem;
-    color: $wasabi;
+  &:hover > .shopping-buttons {
+    visibility: visible;
+    opacity: 1;
   }
 
-  span.ms-2.silver {
-    text-decoration: line-through;
-  }
+  &__content {
+    p {
+      text-align: center;
+    }
 
-  .line {
-    border-top: 1px solid $black;
-    width: 20%;
-    margin: 0 auto 1rem;
+    p.price {
+      font-size: 1.8rem;
+      color: $wasabi;
+    }
+
+    span.ms-2.silver {
+      text-decoration: line-through;
+      white-space: nowrap;
+    }
+
+    .line {
+      border-top: 1px solid $black;
+      width: 20%;
+      margin: 0 auto 1rem;
+    }
   }
 }

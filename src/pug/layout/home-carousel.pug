@@ -1,0 +1,41 @@
+mixin carousel
+  .feedback.container
+    #feedback.carousel.carousel-dark.slide(data-bs-ride='carousel').pb-6.mb-6
+      .carousel-indicators
+        button.active(type='button' data-bs-target='#feedback' data-bs-slide-to='0' aria-current='true' aria-label='Slide 1')
+        button(type='button' data-bs-target='#feedback' data-bs-slide-to='1' aria-label='Slide 2')
+      .carousel-inner
+        .carousel-item.active
+          p.text-center.d-md-none.semi-bold "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt adipisci ullam ipsum in quas aut aspernatur possimus. Aliquam laudantium esse reiciendis illo quo nisi natus, porro minus debitis expedita, alias reprehenderit voluptatum modi numquam praesentium."
+          .feedback__info.d-flex.align-items-center.justify-content-center.mt-6
+            img.me-5.img-fluid.p-2(src='assets/feedback-avatar.png' alt='avatar')
+            .d-flex.flex-column
+              p.d-none.d-md-block.semi-bold.w-75 "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt adipisci ullam ipsum in quas aut aspernatur possimus. Aliquam laudantium esse reiciendis illo quo nisi natus, porro minus debitis expedita, alias reprehenderit voluptatum modi numquam praesentium."
+              .d-flex.flex-column.flex-md-row
+                p.me-md-3 TUTILE
+                p.silver.italic Giám đốc phát trển sản phẩm
+        .carousel-item
+          p.text-center.d-md-none.semi-bold "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt adipisci ullam ipsum in quas aut aspernatur possimus. Aliquam laudantium esse reiciendis illo quo nisi natus, porro minus debitis expedita, alias reprehenderit voluptatum modi numquam praesentium."
+          .feedback__info.d-flex.align-items-center.justify-content-center.mt-6
+            img.me-5.img-fluid.p-2(src='assets/feedback-avatar2.png' alt='avatar')
+            .d-flex.flex-column
+              p.d-none.d-md-block.semi-bold.w-75 "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt adipisci ullam ipsum in quas aut aspernatur possimus. Aliquam laudantium esse reiciendis illo quo nisi natus, porro minus debitis expedita, alias reprehenderit voluptatum modi numquam praesentium."
+              .d-flex.flex-column.flex-md-row
+                p.me-md-3 KHOA
+                p.silver.italic Nhân viên ưu tú
+  .popular.pt-6
+    .container
+      .d-flex.flex-column.flex-md-row.justify-content-center.align-items-center
+        a(href="products-grid.html").popular__link Sản phẩm mới
+        a(href="products-grid.html").popular__link.popular__link--active.mx-md-5 Sản phẩm bán chạy
+        a(href="products-grid.html").popular__link Sản phẩm đặc biệt
+      +dash-slash
+      ul.row.row-cols-2.row-cols-md-6.mx-auto.mb-5
+        each item in ['Mỹ phẩm','Chăm sóc da','Dành cho tóc','Nước Hoa','Trang sức','Quà tặng']
+          li
+            a(href="products-grid.html")= item
+    .popular__cards
+      .d-flex.mx-auto
+        each item in products
+          if item.highPiority
+            +product-card(item)

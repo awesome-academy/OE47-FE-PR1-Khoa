@@ -6,7 +6,7 @@ block title
 block content
   .products-list.gx-5
     each item in products
-      if item.onPage1
+      if item.highPiority
         .products-list__item.row
           .col-md-4
             img.img-fluid.mx-auto.d-block(src=item.src, alt="product image")
